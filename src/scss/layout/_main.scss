@@ -1,0 +1,59 @@
+@use '../core/variables' as vars;
+
+.landing__div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+
+  &-text {
+    text-align: center;
+    padding-inline: 40px;
+    padding-block: 100px;
+    color: vars.$color-secondary;
+    font-size: 20px;
+
+}
+}
+
+
+
+.landing__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-play {
+        padding: 5px 25px;
+        font-size: 20px;
+        font-family: vars.$font-secondary;
+        background-color: vars.$color-secondary;
+        color: vars.$color-primary;
+        border: 3px solid vars.$color-primary;
+        border-radius: 20px;
+        text-decoration: none;
+        box-shadow: 3px 3px 5px rgba(195, 72, 95, 0.4);
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: pulse 3s ease-in-out infinite;
+    
+        
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 6px 6px 12px rgba(195, 72, 95, 0.7);
+        animation-play-state: paused;
+      }
+    
+      @keyframes pulse {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+      }
+    }
+}
+
+
+
