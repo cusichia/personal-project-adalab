@@ -1,0 +1,130 @@
+@use '../core/variables' as vars;
+
+.landing {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    height: 40vh;
+  }
+
+  &__text {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: vars.$color-secondary;
+
+    @media (min-width: 500px) {
+      font-size: 1rem;
+    }
+
+    @media (min-width: 800px) {
+      font-size: 1.2rem;
+    }
+
+    @media (min-width: 1000px) {
+      font-size: 1.5rem;
+    }
+
+    .typewriter {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+    }
+
+    .typewriter--hello {
+      width: 0;
+      animation: typeHello 0.5s steps(6, end) 0.2s forwards,
+    }
+
+    .typewriter--desc {
+      width: 0;
+      display: inline-block;
+    }
+
+    .delay-1 {
+      animation: typeLine 3s steps(45, end) 1s forwards,
+    }
+
+    .delay-2 {
+      animation: typeLine 3s steps(45, end) 4s forwards,
+    }
+  }
+}
+
+// Animaciones
+@keyframes typeHello {
+  from {
+    width: 0;
+  }
+  to {
+    width: 6ch;
+  }
+}
+
+@keyframes typeLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 45ch;
+  }
+}
+
+
+
+.landing__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 7s forwards;
+
+    &-play {
+        padding: 5px 25px;
+        font-size: 20px;
+        font-family: vars.$font-secondary;
+        background-color: vars.$color-secondary;
+        color: vars.$color-primary;
+        border: 3px solid vars.$color-primary;
+        border-radius: 20px;
+        text-decoration: none;
+        box-shadow: 3px 3px 5px rgba(195, 72, 95, 0.4);
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: pulse 3s ease-in-out infinite;
+    
+        
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 6px 6px 12px rgba(195, 72, 95, 0.7);
+        animation-play-state: paused;
+      }
+    
+      @keyframes pulse {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px); // desde abajo
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+}
+
+
+

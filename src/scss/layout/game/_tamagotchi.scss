@@ -1,0 +1,69 @@
+.mainGame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.tagamotchi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    border: solid 3px black;
+    border-radius: 10px;
+}
+
+.imgCat{
+    width: 300px;
+}
+
+.bubble {
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    image-rendering: pixelated;
+    border: solid 2px black;
+    box-shadow:
+        2px 2px 0 gray,
+        inset -5px -5px lightblue;
+}
+
+.bubble-detail{
+    position: relative;
+    bottom: 2px;
+    left: 15px;
+    background-color: white;
+    padding: 5px;
+    width: 1px;
+    border: solid 2px black;
+    border-radius: 20px;
+    box-shadow:
+        2px 2px 0 grey,
+        inset -2px -2px lightblue;
+}
+
+.bubble-detail2{
+    position: relative;
+    bottom: 4px;
+    left: 30px;
+    background-color: white;
+    padding: 3px;
+    width: 1px;
+    border: solid 2px black;
+    border-radius: 20px;
+    box-shadow:
+        2px 2px 0 grey,
+        inset -2px -2px lightblue;
+}
+
+
+
+.imgAction{
+    width: 80px;
+}

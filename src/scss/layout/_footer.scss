@@ -1,11 +1,6 @@
 @use '../core/variables' as vars;
 
 .footer_p {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100vw;
-    padding: 10px;
     text-align: center;
     color: vars.$color-tertiary;
 }
