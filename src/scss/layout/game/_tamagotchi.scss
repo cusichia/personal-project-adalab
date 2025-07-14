@@ -20,6 +20,19 @@
 
 .imgCat{
     width: 300px;
+    animation: catMoving 1s infinite;
+}
+
+@keyframes catMoving {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* se mueve hacia arriba */
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .bubble {
